@@ -1,6 +1,10 @@
 import {fromJS, Map} from 'immutable';
 
-import {setNominees, setNomineeWinner} from '../actions/nominees';
+import {
+    setNominees,
+    setNomineeWinner,
+    getNomineeWinner
+} from '../actions/nominees';
 
 describe('nominee logic', () => {
     test('setNominees adds nominees to the state', () => {
@@ -47,5 +51,31 @@ describe('nominee logic', () => {
         expect(nextState).toEqual(fromJS({
             winner: 'Kate Beckinsale'
         }));
+    });
+    
+    test('getNomineeWinner returns correct winner', () => {
+        const state = fromJS({
+            nominees: {
+                'Lead Actor': {
+                    winner: 'Kate Beckinsale'
+                }
+            }
+        });
+        const leadActorWinner = getNomineeWinner(state, 'Lead Actor');
+        
+        expect(leadActorWinner).toEqual('Kate Beckinsale');
+    });
+    
+    test('getNomineeWinner returns default response if no winner', () => {
+        const state = fromJS({
+            nominees: {
+                'Load Actor': {
+                    entries: ['Gary Oldman', 'Kate Beckinsale']
+                }
+            }
+        });
+        const leadActorWinner = getNomineeWinner(state, 'Lead Actor');
+
+        expect(leadActorWinner).toEqual('Winner not announced yet.');
     });
 });
