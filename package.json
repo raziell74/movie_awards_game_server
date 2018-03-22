@@ -4,7 +4,7 @@
   "description": "A server to manage Movie Awards game redux states",
   "main": "index.js",
   "scripts": {
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom --verbose"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,9 @@
     "whatwg-fetch": "^2.0.3"
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "es2015"
+    ]
   },
   "jest": {
     "collectCoverageFrom": [
@@ -62,5 +64,8 @@
       "jsx",
       "node"
     ]
+  },
+  "dependencies": {
+    "immutable": "^3.8.2"
   }
 }
