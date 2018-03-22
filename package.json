@@ -4,7 +4,7 @@
   "description": "A server to manage Movie Awards game redux states",
   "main": "index.js",
   "scripts": {
-    "start": "bable-node index.js",
+    "start": "babel-node index.js",
     "test": "node scripts/test.js --env=jsdom --verbose"
   },
   "repository": {
