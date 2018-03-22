@@ -1,6 +1,6 @@
 import {fromJS, Map} from 'immutable';
 
-import {updatePlayerScores, getLeader} from '../actions/score';
+import {updatePlayerScores} from '../actions/score';
 
 describe('scoring logic', () => {
     test('updatePlayerScores correctly calcualtes player scores', () => {

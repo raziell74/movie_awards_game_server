@@ -35,7 +35,7 @@ describe('nominee logic', () => {
         const state = fromJS({
             nominees: {
                 'Lead Actor': {
-                entries: ['Gary Oldman', 'Kate Beckinsale']
+                    entries: ['Gary Oldman', 'Kate Beckinsale']
                 },
                 'Best Picture': {
                     entries: ['Dunkirk', 'The Shape of Water']
