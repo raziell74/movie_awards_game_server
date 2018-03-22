@@ -12,6 +12,6 @@ export function setNomineeWinner(categoryState, winner) {
 export function getNomineeWinner(state, category) {
     return state.getIn(
         ['nominees', category, 'winner'],
-        'Winner not announced yet.'
+        false
     );
 }

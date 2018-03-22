@@ -76,6 +76,6 @@ describe('nominee logic', () => {
         });
         const leadActorWinner = getNomineeWinner(state, 'Lead Actor');
 
-        expect(leadActorWinner).toEqual('Winner not announced yet.');
+        expect(leadActorWinner).toEqual(false);
     });
 });
